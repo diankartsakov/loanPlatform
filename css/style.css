@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color: green;
+}
+
+
+#navigation {
+    display: flex;
+    align-items: center;
+}
+
+#logoutDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#logout {
+    display: none;
+    align-items: center;
+}
+
+#navigation>a,
+#logout>a {
+    display: flex;
+    margin: 0 20px;
+    text-decoration: none;
+    color: yellowgreen;
+    padding: 10px;
+    border-radius: 20%;
+}
+
+#navigation>a:hover,
+#logout>a:hover {
+    color: wheat;
+    border: 2px solid wheat;
+    background-color: yellowgreen;
+}
+
+body {
+    font-size: 20px;
+}
+
+#login {
+    background-color: rgb(156, 119, 190);
+}
+
+#register,
+#loans {
+    background-color: khaki;
+}
+
+#home,
+#overview
+ {
+    background-color: rgb(243, 133, 93);
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: yellowgreen;
+    background-color: green;
+}
+
+
+.formTitle {
+    align-self: center;
+    color: green;
+    font-weight: 600;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid green;
+    background-color: yellowgreen;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+#forgotPass {
+    text-decoration: none;
+    font-size: 13px;
+    margin: 2px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#loginError,
+#usernameError,
+#passError,
+#confirmPassError,
+#incomeErr,
+#durationErr,
+#loanSizeErr {
+    font-size: 15px;
+    display: none;
+    background-color: red;
+    margin: 5px;
+    border: 2px solid green;
+    padding: 7px;
+}
+
+input {
+    margin: 2px;
+    padding: 5px;
+}
+
+#passBtn {
+    display: flex;
+    justify-content: space-between;
+}
+
+#passReq {
+    position: absolute;
+    display: none;
+    background-color: rgb(211, 11, 11);
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid green;
+    border-radius: 10%;
+
+}
+
+#passReq p {
+    padding-bottom: 5px;
+}
+
+.submitBtn {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+#passInfo:hover+#passReq {
+    display: block;
+}
+
+
+.page {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: green;
+}
+
+table {
+    width: 40%;
+    background-color: yellowgreen;
+}
+
+td, th {
+    width: 100/6;
+    border: solid black 2px;
+}
+
+#overviewCountainer {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: yellowgreen;
+    border: 2px solid green;
+    border-radius: 10%;
+}
+
+#overviewId,
+#overviewAmount,
+#overviewTerm,
+#overviewStatus {
+    margin: 5px;
+}
+
+#cancelApplication {
+    background: green;
+    border: none;
+
+}
+
+#cancelApplication:hover {
+    background-color: cornflowerblue;
+    border: 2px solid green;
+}
+
+h3, .button {
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+#overview {
+    display: flex;
+    flex-direction: column;
+}
+
+#offersContainer {
+    display: flex;
+}
+
+.offerDiv, .loanDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: yellowgreen;
+    border: 2px solid green;
+    border-radius: 10%;
+}
+
+.offerDiv div, .loanDiv div {
+    margin: 5px;
+}
+
+.acceptBtn, .payBtn {
+    background: green;
+    border: none;
+
+}
+
+.acceptBtn:hover, .payBtn:hover {
+    background-color: cornflowerblue;
+    border: 2px solid green;
+}

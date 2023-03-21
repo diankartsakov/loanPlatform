@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Platform</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="navigation">
+            <a href="#login" id="loginNav">Login</a>
+            <a href="#register" id="registerNav">Register</a>
+            <a href="#home" id="homeNav">Home</a>
+            <a href="#overview" id="overviewNav">Applications</a>
+            <a href="#loans" id="loansNav">Loans</a>
+        </div>
+        <div id="logoutDiv">
+            <div id="logout">
+                <a href="#logout">Logout</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="page" id="login">
+
+            <form id="loginForm">
+                <h2 class="formTitle">Login</h2>
+                <input name="username" type="text" placeholder="username" required>
+                <input name="password" type="password" placeholder="pass" required>
+                <a href="" id="forgotPass">Forgot password ?</a>
+                <input type="submit" value="Login" class="submitBtn" id="loginBtn" disabled="disabled">
+                <div id="loginError">Wrong Credentials</div>
+            </form>
+
+        </div>
+        <div class="page" id="register">
+            <form id="registerForm">
+                <h2 class="formTitle">Register Form</h2>
+                <input name="username" type="text" placeholder="Username" required>
+                <div id="usernameError"></div>
+                <input class="passField" name="password" type="password" placeholder="Password" required>
+                <div id="passError">Invalid password !</div>
+                <input class="passField" name="confirmPassword" type="password" placeholder="Confirm password" required>
+                <div id="confirmPassError">Passwords does not match !</div>
+                <div id="passBtn">
+                    <input type="button" id="showHidePass" value="Show password">
+                    <div>
+                        <input type="button" id="passInfo" value="i">
+                        <div id="passReq">
+                            <ul>
+                                <p>Password requirements:</p>
+                                <li>One small letter</li>
+                                <li>One capital letter</li>
+                                <li>One special character</li>
+                                <li>At least 6 character</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Register" name="submitReg" class="submitBtn" id="submitReg"
+                    disabled="disabled">
+            </form>
+        </div>
+        <div class="page" id="home">
+            <form id="loanApplicationForm">
+
+                <h3 class="formTitle">Loan Application Form</h3>
+                <label for="borrowerName">Username:</label>
+                <input type="text" name="borrowerName" disabled>
+                <label for="borrowerIncome">User monthly income:</label>
+                <input type="number" name="borrowerIncome" placeholder="Your Monthly Income" required>
+                <div id="incomeErr">Minimum income 100 BGN</div>
+                <label for="requestedAmount">Loan Size in BGN:</label>
+                <input type="number" name="requestedAmount" placeholder="Loan Size in BGN" required>
+                <div id="loanSizeErr">Minimum loan amount is 1000 BGN !</div>
+                <label for="requestedTerm">Loan duration in months:</label>
+                <input type="number" name="requestedTerm" placeholder="Loan durration in months" required>
+                <div id="durationErr">Enter duration between 6 and 120 months !</div>
+                <input type="submit" value="Apply" name="submitLoanApplication" class="submitBtn"
+                    id="submitLoanApplication" disabled="disabled">
+            </form>
+        </div>
+        <div class="page" id="overview">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Loan Size</th>
+                        <th scope="col">Loan Term</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                        <th scope="col">Offers</th>
+                    </tr>
+                </thead>
+                <tbody id="overviewTableBody">
+                </tbody>
+            </table>
+
+            <div id="offersContainer"></div>
+
+        </div>
+        <div class="page" id="loans">
+            <div id="loansContainer"></div>
+        </div>
+
+        <footer>
+            <p> &copy All rights reserved for Dido</p>
+        </footer>
+        <script src="./UserManager.js"></script>
+        <script src="./LoanManager.js"></script>
+        <script src="./viewController.js"></script>
+</body>
+
+</html>
